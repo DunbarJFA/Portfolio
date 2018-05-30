@@ -1,0 +1,5 @@
+GroceryTracker.java  is  an  application  that  models  a  grocery  list  app  using  objects  of  the  GroceryList class  made  in  GroceryList.java.  
+
+The app takes a single command-line argument, the name of the file to save/load from. The filename can be absolute or relative.  (If  the  given  file  does  not  exist,  a  new  file  is  created  with  the  given  filepath.)
+
+Upon  running  the  app,  the  user  can  interact  with  the  program  using  the  options  presented  at  the  main  menu  screen to  print  the  list,  add/remove  items,  save changes to the list, and exit the program.
