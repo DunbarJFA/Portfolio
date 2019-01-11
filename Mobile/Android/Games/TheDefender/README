@@ -1,24 +1,3 @@
-Jerod Dunbar
-Homework 2
-
-Bells & Whistles:
-
-Beautification
-Level Up & Fight Again
-	The game only ends when one of the players can no longer continue!
-Make Love, not War
-	Why not both? If your Strength or Intelligence is high enough, you may
-	Intimidate or Reason your way out of a pointless battle... or you can 
-	Curse your enemy to drain their Strength then beat them to a pulp
-	(watch out for those cooldowns, though... they'll get ya).
-Exposition
-	A few pages of brief backstory that serves as an introduction to our
-	noble hero.
-Used Parcelable to pass objects between activities
-	Cause Serializable was TOO EASY. I kid, but Parcelable is pretty cool.
-
-
-
 Things of note for a first-time player:
 
 The cooldowns can be a tricky to get used to:
