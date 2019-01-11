@@ -1,6 +1,7 @@
 package dist_sem;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.Serializable;
@@ -8,6 +9,7 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
+import java.util.ArrayList;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 /*
@@ -28,40 +30,53 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 public class ChannelPortByThr implements ChannelPort, ChannelPort4Impl{
     int portID;
     int endpointCount;
-    ServerSocket serverSocket;
-    Listener[] listeners;
-    ConcurrentLinkedQueue<Serializable> inbox;
-    PrintWriter[] outbox;
+    ArrayList<Listener> listeners;
+    ConcurrentLinkedQueue<Serializable> queue;
+    ObjectOutputStream[] outbox;
+    ObjectInputStream[] inbox;
+    ArrayList<NodeInfo> nodes;
     int clientsFinished = 0;
     int messageFlag = 0;
+    Boolean initiator = false;
 
     
     public ChannelPortByThr(int portID, int endpointCount) {
         this.portID = portID;
         this.endpointCount = endpointCount;
-        listeners = new Listener[endpointCount];
-        inbox = new ConcurrentLinkedQueue<Serializable>();
-        outbox = new PrintWriter[endpointCount];
+        listeners = new ArrayList<>(endpointCount);
+        queue = new ConcurrentLinkedQueue<Serializable>();
+        outbox = new ObjectOutputStream[endpointCount];
+        nodes = new ArrayList<>();
     }
 
     public void setup(){
-        serverSocket = null;
+        ServerSocket serverSocket = null;
         try{
             serverSocket = new ServerSocket(portID);
         }catch(IOException ioe){
             System.out.println("Error establishing connection!");
+            ioe.printStackTrace();
+            System.exit(-1);
         }
         for(int i = 0; i < endpointCount; i++){
             try {
                 System.out.println("Waiting for Client...");
                 Socket clientSocket = serverSocket.accept();
                 ObjectInputStream inFlow = new ObjectInputStream(clientSocket.getInputStream());
-                outbox[i] = new PrintWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
-                listeners[i] = new Listener(i, inFlow, this);
+                outbox[i] = new ObjectOutputStream(clientSocket.getOutputStream());
+                listeners.add(new Listener(i, inFlow, this));
+                if(initiator){
+                    int id = inFlow.readInt();
+                    int port = inFlow.readInt();
+                    String ip = clientSocket.getInetAddress().getHostAddress();
+                    nodes.add(new NodeInfo(id,port,ip));
+                    System.out.println("Node " + id + " Registered!");
+                }
             } catch (IOException ioe) {
                 System.out.println("Error Establishing Connection in SETUP!");
             }
         }
+        initiator = false;
         System.out.println("All Connections Established!");
     }
     
@@ -70,24 +85,23 @@ public class ChannelPortByThr implements ChannelPort, ChannelPort4Impl{
             listener.start();
         }
         System.out.println("Listening for Messages!");
-        receive();
     }
     @Override
     public synchronized void receive(){
         while(true){
             //wait for message
-            while (inbox.isEmpty()) {
+            while (queue.isEmpty()) {
                 messageFlag = 0; 
 		    	try {
-		    		wait(); 
+		    		Thread.sleep(500); 
 		    	} catch (InterruptedException ire) {
+                    System.out.println("Error in Server Receive!");
 		    		ire.printStackTrace();
 		    	}
 		    } 
-            if(!inbox.isEmpty()){
+            if(!queue.isEmpty()){
                 //signal message in queue
                 messageFlag = 1;
-                
             }
         }
     }
@@ -96,15 +110,19 @@ public class ChannelPortByThr implements ChannelPort, ChannelPort4Impl{
     public synchronized void broadcast(Serializable message) {
         System.out.println("BROADCASTING");
         
-        for(PrintWriter pw: outbox){    
-            pw.println(message);
-            pw.flush();
+        for(ObjectOutputStream pw: outbox){    
+            try {
+                pw.writeObject(message);
+                pw.flush();
+            } catch (IOException e) {
+                System.out.println("Error in Broadcast!");
+            }
         }
     }
     
     @Override
     public boolean empty() {
-        if (inbox.isEmpty()){
+        if (queue.isEmpty()){
             return true;
         }else{    
             return false;
@@ -113,8 +131,8 @@ public class ChannelPortByThr implements ChannelPort, ChannelPort4Impl{
     
     @Override
     public synchronized void enqueue(Serializable message) {
-        //add message to inbox for broadcasting
-        inbox.offer(message);
+        //add message to queue for broadcasting
+        queue.offer(message);
         notifyAll();
     }
 
@@ -131,11 +149,23 @@ public class ChannelPortByThr implements ChannelPort, ChannelPort4Impl{
     }
 
     public ConcurrentLinkedQueue<Serializable> getQueue(){
-        return inbox;
+        return queue;
     }
 
     public int getMessageFlag(){
         return messageFlag;
+    }
+
+    public ArrayList<NodeInfo> getNodes(){
+        return nodes;
+    }
+
+    public void setInitiator(boolean mode){
+        initiator = mode;
+    }
+
+    public void addListener(Listener listener){
+        listeners.add(listener);
     }
 
 }

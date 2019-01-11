@@ -36,6 +36,7 @@ public class ChannelEndpointByThr implements ChannelEndpoint{
         while(socket == null){
             try{
                 //establish socket connection to server
+                System.out.println("Connecting to " + ip + " on Port: " + port);
                 socket = new Socket(ip, port);
                 System.out.println("Socket Established");
                 //establish outputstream for message passing to server
@@ -47,6 +48,7 @@ public class ChannelEndpointByThr implements ChannelEndpoint{
 
             }catch(UnknownHostException uhe){
                 System.err.println("Server Unknown");
+                System.exit(-1);
             }catch(IOException ioe){
                 System.err.println("Connecting...");
             }
@@ -62,8 +64,7 @@ public class ChannelEndpointByThr implements ChannelEndpoint{
     @Override
     public void send(Serializable message) {
         try {
-            message = message.toString().concat("," + id);
-            outbox.writeObject(message);
+            outbox.writeUTF(message.toString());
             outbox.flush();
             System.out.println("Sending..." + message.toString());
         }catch (SocketException se){

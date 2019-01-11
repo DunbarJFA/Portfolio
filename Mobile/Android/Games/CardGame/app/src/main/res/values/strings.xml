@@ -1,0 +1,135 @@
+<resources>
+    <string name="app_name">UNO CSCI, The Trading Card Game</string>
+    <!--Shop Strings-->
+    <string name="Shop_name">The Shop</string>
+    <string name="Shop_greeting">Welcome to the Shop!</string>
+    <string name="Buy">Get new Packs!</string>
+    <string name="Sell">Sell your Duplicates!</string>
+    <string name="Coins">Get more Coins!</string>
+    <string name="buttonCoins">Battle! (Not Really)</string>
+    <string name="buttonBuy">Buy</string>
+    <string name="buttonSell">Sell</string>
+    <!--Profile Strings-->
+    <string name="Profile_name">Profile</string>
+    <string name="ToCollection">View Your Cards</string>
+    <string name="buttonCollection">To Collection</string>
+    <string name="CoinsLeft">= 0</string>
+    <string name="OpenPack">Open a New Pack!</string>
+    <string name="buttonOpenPack">Open</string>
+    <string name="PacksLeft">= 0</string>
+    <!--Collection Strings-->
+    <string name="Collection_name">Collection</string>
+    <string name="Collection_hidden">_???_</string>
+    <string name="Collection_hiddenFlavor">Unlock to Learn More!</string>
+    <string name="Collection_Mahdi">Grandmaster Mahdi</string>
+    <string name="Collection_MahdiFlavor1">--</string>
+    <string name="Collection_MahdiFlavor2">--Fearless overseer of The Third Floor</string>
+    <string name="Collection_MahdiFlavor3">--&quot;Beware he who stalks the halls!&quot;</string>
+    <string name="Collection_Lisa">Lisa, The Pillar</string>
+    <string name="Collection_LisaFlavor1">--</string>
+    <string name="Collection_LisaFlavor2">--The Third Floor\'s Patron and Fixer</string>
+    <string name="Collection_LisaFlavor3">--&quot;No wheel turns in this place without her hand upon it.&quot;</string>
+    <string name="Collection_DePano">DePano, the Algomancer</string>
+    <string name="Collection_DePanoFlavor1">--</string>
+    <string name="Collection_DePanoFlavor2">--Scholar of the ancient tongues: Haskell, Cobol, and Lisp</string>
+    <string name="Collection_DePanoFlavor3">--&quot;Allez Les Bleus! -DePano&quot;</string>
+    <string name="Collection_Tu">Time-Master Tu</string>
+    <string name="Collection_TuFlavor1">--</string>
+    <string name="Collection_TuFlavor2">--Master of Concurrent and Distributed Magics</string>
+    <string name="Collection_TuFlavor3">--&quot;You want to eat? You must getFork()!&quot;</string>
+    <string name="Collection_Samuel">Ben the Bard</string>
+    <string name="Collection_SamuelFlavor1">--</string>
+    <string name="Collection_SamuelFlavor2">--Merry spreader of Inspiration</string>
+    <string name="Collection_SamuelFlavor3">--&quot;Just keeping it Pizza-centric!&quot;</string>
+    <string name="Collection_Ted">Gumptious Ted</string>
+    <string name="Collection_TedFlavor1">--</string>
+    <string name="Collection_TedFlavor2">--An establishment in The Department, as knowledgeable as he is enthusiastic</string>
+    <string name="Collection_TedFlavor3">--&quot;Where\'s Ted?&quot; &quot;Probably revamping the Intro Sequence, again.&quot;</string>
+    <string name="Collection_Matt">Matt the Magician</string>
+    <string name="Collection_MattFlavor1">--</string>
+    <string name="Collection_MattFlavor2">--Douser of Fires and Captor of Flags</string>
+    <string name="Collection_MattFlavor3">--&quot;I brought GinGins!&quot;</string>
+    <string name="Collection_Ware">Ware, The ArtInt Inquisitor</string>
+    <string name="Collection_WareFlavor1">--</string>
+    <string name="Collection_WareFlavor2">--Seeks to understand the inner workings of the world of Ai</string>
+    <string name="Collection_WareFlavor3">--&quot;Try harder.&quot;</string>
+    <string name="Collection_Summa">The Mighty Summa</string>
+    <string name="Collection_SummaFlavor1">--</string>
+    <string name="Collection_SummaFlavor2">--Cultivates the younger generations with a fierce patience</string>
+    <string name="Collection_SummaFlavor3">--&quot;Tell me the difference between Declaration and Initialization&#8230; or face my wrath!&quot;</string>
+    <string name="Collection_Roussev">Roussev, The Bulgarian Brute</string>
+    <string name="Collection_RoussevFlavor1">--</string>
+    <string name="Collection_RoussevFlavor2">--Earned his nickname by savagely leading his men from one victorious grant proposal to the next</string>
+    <string name="Collection_RoussevFlavor3">--&quot;IT\'S ROUSSEV DAY!!!&quot;</string>
+    <string name="Collection_Sylve">Sylve, the Paladin of Elon</string>
+    <string name="Collection_SylveFlavor1">--</string>
+    <string name="Collection_SylveFlavor2">--Champion of a small sect that worships the deeds of an eccentric billionaire</string>
+    <string name="Collection_SylveFlavor3">--&quot;With great @channel strength, comes great @channel responsibility.&quot;</string>
+    <string name="Collection_Aaron">Aaron the Fervent</string>
+    <string name="Collection_AaronFlavor1">--</string>
+    <string name="Collection_AaronFlavor2">--Passionate about problem solving. Really likes C.</string>
+    <string name="Collection_AaronFlavor3">--&quot;I live for this stuff, man.&quot;</string>
+    <string name="Collection_Hiram">Hiram the Articulate</string>
+    <string name="Collection_HiramFlavor1">--</string>
+    <string name="Collection_HiramFlavor2">--Likes 80\'s music so much, he ran out of it.</string>
+    <string name="Collection_HiramFlavor3">--&quot;Synthwave keeps me sane.&quot;</string>
+    <string name="Collection_Haydar">Haydar the Complaintsmith</string>
+    <string name="Collection_HaydarFlavor1">--</string>
+    <string name="Collection_HaydarFlavor2">--Has an axe to grind&#8230;and possibly a bone to pick.</string>
+    <string name="Collection_HaydarFlavor3">--&quot;Has anybody seen my soapbox?&quot;</string>
+    <string name="Collection_Manish">Manish the Security Savant</string>
+    <string name="Collection_ManishFlavor1">--</string>
+    <string name="Collection_ManishFlavor2">--Just biding his time till his PhD...</string>
+    <string name="Collection_ManishFlavor3">--&quot;This is really simple.&quot;</string>
+    <string name="Collection_Nehal">Nehal Conqueror of Complexity</string>
+    <string name="Collection_NehalFlavor1">--</string>
+    <string name="Collection_NehalFlavor2">--Enjoys hard work. Not from around these parts. </string>
+    <string name="Collection_NehalFlavor3">--&quot;Machine Learning is not so bad once you master it!&quot;</string>
+    <string name="Collection_Hedge">Hedge the Overwatchman</string>
+    <string name="Collection_HedgeFlavor1">--</string>
+    <string name="Collection_HedgeFlavor2">--Has lived a lot of places&#8230;Really, like a ton of places.</string>
+    <string name="Collection_HedgeFlavor3">--&quot;Allez Les Bleus! *High-fives DePano*&quot;</string>
+    <string name="Collection_Kyle">Kyle &quot;ManyHats&quot; </string>
+    <string name="Collection_KyleFlavor1">--</string>
+    <string name="Collection_KyleFlavor2">--Has random skills. A handy guy.</string>
+    <string name="Collection_KyleFlavor3">--&quot;I can fix that.&quot;</string>
+    <string name="Collection_Amanda">Amanda the Fretful</string>
+    <string name="Collection_AmandaFlavor1">--</string>
+    <string name="Collection_AmandaFlavor2">--Taking life one semester at a time.</string>
+    <string name="Collection_AmandaFlavor3">--&quot;Only 124 more days to finals!&quot;</string>
+    <string name="Collection_Nolan">Nolan</string>
+    <string name="Collection_NolanFlavor1">--</string>
+    <string name="Collection_NolanFlavor2">--Real good at this stuff.</string>
+    <string name="Collection_NolanFlavor3">--&quot;Can\'t talk right now, I\'m making three apps and a website for the college.&quot;</string>
+    <string name="Collection_Chris">Chris</string>
+    <string name="Collection_ChrisFlavor1">--</string>
+    <string name="Collection_ChrisFlavor2">--Help Desk Expert.</string>
+    <string name="Collection_ChrisFlavor3">--&quot;Think we can spam this Slack group and piss Jerod off?&quot;</string>
+    <string name="Collection_Noah">Noah</string>
+    <string name="Collection_NoahFlavor1">--</string>
+    <string name="Collection_NoahFlavor2">--Favorite thing is car soccer.</string>
+    <string name="Collection_NoahFlavor3">--&quot;Jerod doesnt pay attention to slack. - in Slack&quot;</string>
+    <string name="Collection_Chase">Chase</string>
+    <string name="Collection_ChaseFlavor1">--</string>
+    <string name="Collection_ChaseFlavor2">--He graduated recently.</string>
+    <string name="Collection_ChaseFlavor3">--&quot;You can\'t microwave paper, can you?&quot;</string>
+    <string name="Collection_Rabble">The Faceless Rabble</string>
+    <string name="Collection_RabbleFlavor1">--</string>
+    <string name="Collection_RabbleFlavor2">--The true horror is, very time you look, there\'s more of them&#8230;</string>
+    <string name="Collection_RabbleFlavor3">--&quot;Is this the Help Desk?&quot;</string>
+
+    <!--Pack Opening Strings-->
+    <string name="PackOpen_name">Pack Contents</string>
+    <!--Log Out Strings-->
+    <string name="Logout">Ready to Log Out?</string>
+    <string name="confirmLogout">Exit</string>
+    <!--Main Strings-->
+    <string name="main_name">THE CARD GAME</string>
+    <string name="player_name">Player McPlayerface</string>
+    <string name="main_LogOut">Log Out</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <string name="Hamburger">Open the Drawer to Start!</string>
+    <string name="Welcome">The Trading Card Game</string>
+
+</resources>

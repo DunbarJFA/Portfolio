@@ -1,0 +1,47 @@
+Jerod Dunbar
+Homework 2
+
+Bells & Whistles:
+
+Beautification
+Level Up & Fight Again
+	The game only ends when one of the players can no longer continue!
+Make Love, not War
+	Why not both? If your Strength or Intelligence is high enough, you may
+	Intimidate or Reason your way out of a pointless battle... or you can 
+	Curse your enemy to drain their Strength then beat them to a pulp
+	(watch out for those cooldowns, though... they'll get ya).
+Exposition
+	A few pages of brief backstory that serves as an introduction to our
+	noble hero.
+Used Parcelable to pass objects between activities
+	Cause Serializable was TOO EASY. I kid, but Parcelable is pretty cool.
+
+
+
+Things of note for a first-time player:
+
+The cooldowns can be a tricky to get used to:
+	There are two combat options, Passive and Aggro. Each button gives you
+	access to two more options pertaining to your chosen combat style. 
+	Where it gets finicky is that the buttons all share the same two 
+	spaces in the layout.
+The combat is a little too fast-paced. Definitely not fully balanced. 
+
+No bugs!! (That I've found.)
+
+LUCK ONLY MATTERS IN HORSESHOES AND HANDGRENADES!!! (Really, it doesn't do
+ 	anything yet, don't waste your skill points on it.) The plan is to 
+	implement other enemies and a drop system based on your luck attribute
+	and to incorporate luck into combat. Gonna work on that next. 
+
+I really enjoyed this assignment (spent basically every minute since I emailed
+you working on it), so thanks for giving it to us. This is a bit of a rush 
+job, so I didn't get to everything that I wanted (like the unfinished Luck
+ feature, incomplete beautification, and lack of sound), but I plan to keep
+ working on polishing this thing. I had no idea mobile app dev would be this
+ fun. Really glad I'm in the class.
+
+All best,
+
+Jerod

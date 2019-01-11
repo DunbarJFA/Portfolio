@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment"
+    android:background="@drawable/linen_background"
+    >
+
+    <TextView
+        android:id="@+id/textPackCountProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PacksLeft"
+        app:layout_constraintBottom_toBottomOf="@+id/imagePackCountProfile"
+        app:layout_constraintStart_toEndOf="@+id/imagePackCountProfile"
+        app:layout_constraintTop_toTopOf="@+id/imagePackCountProfile"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imagePackCountProfile"
+        android:layout_width="31dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/imageCoinProfile"
+        app:layout_constraintTop_toBottomOf="@+id/imageCoinProfile"
+        app:srcCompat="@drawable/boosters_thumb" />
+
+    <TextView
+        android:id="@+id/textPackOpenPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:text="@string/OpenPack"
+        app:layout_constraintEnd_toEndOf="@+id/buttonPackOpen"
+        app:layout_constraintStart_toStartOf="@+id/buttonPackOpen"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageCoinProfile"
+        android:layout_width="31dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="92dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/coin" />
+
+    <TextView
+        android:id="@+id/textCoinCountProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/CoinsLeft"
+        app:layout_constraintBottom_toBottomOf="@+id/imageCoinProfile"
+        app:layout_constraintStart_toEndOf="@+id/imageCoinProfile"
+        app:layout_constraintTop_toTopOf="@+id/imageCoinProfile"
+        app:layout_constraintVertical_bias="0.857" />
+
+    <Button
+        android:id="@+id/buttonPackOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/buttonOpenPack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPackOpenPrompt" />
+
+    <FrameLayout
+        android:id="@+id/profile_Fragment_Container"
+        android:layout_width="347dp"
+        android:layout_height="432dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPackOpen">
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

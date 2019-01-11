@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Homework3</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="firstTab">Roster</string>
+    <string name="secondTab">Details</string>
+    <string name="thirdTab">The Hunt</string>
+    <string name="fourthTab">The Shop</string>
+    <string name="stamHolder">Stamina:</string>
+    <string name="HuntButton">Get Hunting!</string>
+    <string name="HuntPrompt">Choose Who To Send Out!</string>
+    <string name="HuntDiff">How hard will your hunt be?</string>
+    <string name="Easy">Easy: 1 STAM</string>
+    <string name="Medium">Medium: 3 STAM</string>
+    <string name="Hard">Hard: 5 Stam</string>
+    <string name="Nightmare">Nightmare: 10 STAM</string>
+    <string name="SellAll">Sell Treasure</string>
+    <string name="buyHealth">Refill a Hunter\'s Health!</string>
+    <string name="buyStam">Refill a Hunter\'s Stamina!</string>
+    <string name="buyHunter">Buy a New Hunter!</string>
+    <string name="insufficientFunds">Insufficient Funds!</string>
+    <string name="insufficientStam">Insufficient Stamina! Rest your hero at the Shop!</string>
+    <string name="gachaCongrats"> hired! Congratulations!</string>
+    <string name="gachaEmpty">No More Hunters to Hire!</string>
+    <string name="fullHealth">Already Full Health!</string>
+    <string name="fullStamina">Already Full Stamina!</string>
+    <string name="fullTreasure">No Room in Inventory!</string>
+    <string name="luckyDamage">You Avoid Misfortune on the Hunt!</string>
+    <string name="unluckyDamage">The Hunt Proved Perilous!</string>
+    <string name="unluckyTreasure">You Found Nothing!</string>
+    <string name="hunterDeath">has perished while on the hunt&#8230;</string>
+    <string name="deathNotice">This hunter is dead&#8230;</string>
+
+</resources>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+
+    <Spinner
+        android:id="@+id/heal_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/heal_label"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="@+id/heal_label"
+        app:layout_constraintTop_toBottomOf="@+id/heal_label">
+
+    </Spinner>
+
+    <Spinner
+        android:id="@+id/rest_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/rest_label"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="@+id/rest_label"
+        app:layout_constraintTop_toBottomOf="@+id/rest_label">
+
+    </Spinner>
+
+    <TextView
+        android:id="@+id/heal_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="152dp"
+        android:text="@string/buyHealth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rest_label"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="28dp"
+        android:text="@string/buyStam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/buy_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="152dp"
+        android:text="@string/buyHunter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buy_health_button"
+        android:layout_width="94dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="68dp"
+        android:text="HEAL"
+        app:layout_constraintEnd_toEndOf="@+id/heal_spinner"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="@+id/heal_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/heal_spinner" />
+
+    <Button
+        android:id="@+id/buy_stam_button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="REST"
+        app:layout_constraintEnd_toEndOf="@+id/rest_spinner"
+        app:layout_constraintStart_toStartOf="@+id/rest_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/rest_spinner" />
+
+    <Button
+        android:id="@+id/buy_hunter_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="28dp"
+        android:text="BUY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buy_label"
+        app:layout_constraintTop_toBottomOf="@+id/buy_label"
+        app:layout_constraintVertical_bias="0.253" />
+
+    <TextView
+        android:id="@+id/shop_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:text="SHOP"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/rest_label"
+        app:layout_constraintStart_toEndOf="@+id/heal_label"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/gold_count_tally"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Gold:"
+        app:layout_constraintStart_toStartOf="@+id/shop_title"
+        app:layout_constraintTop_toBottomOf="@+id/shop_title" />
+
+</android.support.constraint.ConstraintLayout>

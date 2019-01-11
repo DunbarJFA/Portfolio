@@ -1,15 +1,22 @@
 package dist_sem;
 
 import java.io.DataInputStream;
+import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
+import java.io.Serializable;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
+import java.util.concurrent.ConcurrentLinkedQueue;
+
 import dist_sem.NodeInfo;
 
 public class Initiator{
-	ServerSocket servSock;
-	Socket clientSocket;
+
+	ChannelPortByThr server;
+	ConcurrentLinkedQueue<Serializable> queue;
 
 	int myPort;
 	int numNodes;
@@ -18,16 +25,17 @@ public class Initiator{
 	int incomingID;
 	int incomingPort;
 	DataInputStream input;
+	DataInputStream[] directoryIn;
 	ObjectOutputStream output;
-	ObjectOutputStream[] directory;
+	ObjectOutputStream[] directoryOut;
+	String[] ips;
 
-	ArrayList<NodeInfo> nodes;
+	ArrayList<dist_sem.NodeInfo> nodes;
+	ArrayList<Serializable> data;
 
 	public Initiator(int numHelpers,int port){
 		myPort = port;
 		numNodes = numHelpers;
-		directory = new ObjectOutputStream[numNodes];
-		nodes = new ArrayList<>();
 	}
 
 	public static void main(String[] args) {
@@ -41,32 +49,18 @@ public class Initiator{
 	}
 
 	public void initiate(){
-		servSock = new ServerSocket(port);
-		for(int i = 0; i < numNodes; i++){
-			System.out.println("Accepting Connections...");
-			while (clientSocket == null) {
-				clientSocket = servSock.accept();
-			}
-			//determine helper IP address
-			helperIP = clientSocket.getInetAddress().getHostAddress();
-//IF NEEDED: clientSocket.getInetAddress().toString().substring(1);
-			//prepare to receive helper info
-			input = new DataInputStream(clientSocket.getInputStream());
-			//get helper info
-			incomingID = input.readInt();
-			incomingPort = input.readInt();
-			//create and store NodeInfo object
-			nodes.add(new NodeInfo(incomingID,incomingPort,helperIP));
-			//prepare connection to transfer final NodeInfo list
-			directory[i] = new ObjectOutputStream(clientSocket.getOutputStream());
-		}
-		System.out.println("All Helpers Registered. Broadcasting...");
-		//send completed NodeInfo List to all Helpers
-		for (ObjectOutputStream out : directory){
-			out.writeObject(nodes);
-		}
-		System.out.println("Initiation complete. Closing Initiator.");
+		data = new ArrayList<>();
+		server = new ChannelPortByThr(myPort, numNodes);
+		server.setInitiator(true);
+		server.setup();
+		//create NodeInfo objects
+		nodes = server.getNodes();
+		System.out.println("Got NodeInfo!");
+		//prep helpers to receive
+		server.broadcast("ACK");
+		//broadcast NodeInfo list
+		server.broadcast(nodes);
+		System.out.println("All Helpers Registered.");		
+		System.out.println("Initiation complete. Closing Initiator...");
 	}
-
-
 }

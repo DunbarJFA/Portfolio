@@ -1,0 +1,53 @@
+Jerod Dunbar
+Homework 3
+
+Bells and Whistles:
+
+  Work for Your Loot
+  Branching Paths
+  The Rich get Richer
+  Death (sans Rebirth)
+  Make it Beautiful-ish
+  The Shop - allow for acquired treasure to be offloaded for gold.
+           That gold can be used to heal/restore the stamina of 
+           one of your hunters or hire a new hunter! There are 10
+	   hunters in total with 2 unlocked at the start of the game.
+	   When your current hunters have wracked up enough gold, you 
+	   can take a spin at the Hunter Hiring Machine and see which
+	   random new hunter answers your call for help.
+  Luck of the Draw - I'm rather proud of this one. The game is designed
+           to allow for any one of four different types of treasure
+	   hunts to be pursued at one time. Essentially, each is more 
+	   difficult than the last (in terms of danger and cost), but
+	   also offers an improved loot table. There is a system in place
+	   behind the scenes that utilizes the Luck value inherent to each
+	   character in order to determine the results of the hunt. More 
+	   specifically, the higher your luck, the more likely you are to
+	   get the best loot for that difficulty and the less likely you are
+	   to get hurt in the process (some characters struggle with this,
+	   but there's one character who is basically the embodiment of Luck
+	   and never really wants for anything).
+  Specialties - I had one last twist that I wanted to work into the hunting
+	   system, but I ran out of time. Originally, the plan was for each
+	   unique hunter to have its own special area of treasure-hunting 
+	   expertise (for instance Neera, the water spirit, is great at 
+	   getting at submerged treasures while blubbery Keko is best-
+	   suited for icy ruins). A hunter's particular expertise would grant
+	   him/her/it a buff to luck on any hunts attempted on their home
+	   turf. Alas, it was relegated to a stretch goal. I'll probably add
+	   this next.
+
+NOTES:
+	Bugs: I've actually been pretty thorough with my squashing, so I don't
+	    know of any current bugs. That said, they're sure to be out there.
+	Tips: The game actually starts off pretty difficult. Your first two
+	    hunters are obvious greenhorns, so they can have a hard time. It's
+	    highly recommended that you watch their health closely between
+	    hunts, as they can actually die rather easily. The best strategy 
+	    for "clearing" this game (i.e. buying all of the hunters and 
+	    running out of things to do) is to babysit your gimme hunters,
+	    save up, and slowly purchase the better hunters. Healing can be 
+	    rather expensive in a pinch, so be careful! Also, death is 
+	    eternal, and so is the grieving process. Dead hunters will 
+	    actually persist in your Roster and character Details pages,
+	    forever heckling you for your failures.  

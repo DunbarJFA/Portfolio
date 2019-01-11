@@ -32,19 +32,16 @@ public class Listener extends Thread{
 
        while(inbox != null){
             try {
-                msg = (String) inbox.readObject();
-                String[] endCheck = msg.split(",");
-                if(endCheck[0].equals("Close")){
+                msg = (String) inbox.readUTF();
+                if(msg.equals("Close")){
                     System.out.println("Listener " + id + " Client Signaled Close.");
                     hub.finished();
                 }
                 else{
-                    System.out.println("Incoming Message from Listener " + id);
+                    System.out.println("Received: " + msg);
                     //add message to server inbox
                     hub.enqueue(msg);
                 }
-            }catch (ClassNotFoundException cnfe) {
-               cnfe.printStackTrace();
             }catch(SocketException se){
                System.err.println(se);
                errCount++;

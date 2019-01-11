@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/paper"
+    tools:context=".PassiveResults">
+
+    <TextView
+        android:id="@+id/rewardTap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:paddingBottom="150dp"
+        android:text="@string/RewardTap"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/skellie"
+        android:layout_width="match_parent"
+        android:layout_height="498dp"
+        android:onClick="skellieClick"
+        android:paddingTop="150dp"
+        android:src="@drawable/skellie_down" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/coins"
+                android:layout_width="190dp"
+                android:layout_height="196dp"
+                android:layout_gravity="center"
+                android:src="@drawable/coins2"
+                android:visibility="gone"
+                android:onClick="resultClick"/>
+
+            <TextView
+                android:id="@+id/coinText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:layout_gravity="bottom|center"
+                android:paddingBottom="150dp"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/lootsword"
+                android:layout_width="213dp"
+                android:layout_height="204dp"
+                android:layout_gravity="center"
+                android:src="@drawable/lootsword"
+                android:visibility="gone"
+                android:onClick="resultClick"/>
+
+            <TextView
+                android:id="@+id/lootText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:layout_gravity="bottom|center"
+                android:paddingBottom="150dp"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
