@@ -1,13 +1,3 @@
-Jerod Dunbar
-Homework 3
-
-Bells and Whistles:
-
-  Work for Your Loot
-  Branching Paths
-  The Rich get Richer
-  Death (sans Rebirth)
-  Make it Beautiful-ish
   The Shop - allow for acquired treasure to be offloaded for gold.
            That gold can be used to heal/restore the stamina of 
            one of your hunters or hire a new hunter! There are 10
@@ -27,15 +17,13 @@ Bells and Whistles:
 	   to get hurt in the process (some characters struggle with this,
 	   but there's one character who is basically the embodiment of Luck
 	   and never really wants for anything).
-  Specialties - I had one last twist that I wanted to work into the hunting
-	   system, but I ran out of time. Originally, the plan was for each
-	   unique hunter to have its own special area of treasure-hunting 
-	   expertise (for instance Neera, the water spirit, is great at 
-	   getting at submerged treasures while blubbery Keko is best-
-	   suited for icy ruins). A hunter's particular expertise would grant
-	   him/her/it a buff to luck on any hunts attempted on their home
-	   turf. Alas, it was relegated to a stretch goal. I'll probably add
-	   this next.
+  Specialties - The plan is for each unique hunter to have its own special 
+  	   area of treasure-hunting expertise (for instance Neera, the water
+	   spirit, is great at getting at submerged treasures while blubbery 
+	   Keko is best-suited for icy ruins). A hunter's particular expertise 
+	   would grant him/her/it a buff to luck on any hunts attempted on 
+	   their home turf. Alas, it was relegated to a stretch goal. I'll 
+	   probably add this next.
 
 NOTES:
 	Bugs: I've actually been pretty thorough with my squashing, so I don't
