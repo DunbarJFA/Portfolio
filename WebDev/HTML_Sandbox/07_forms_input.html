@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms and Input</title>
+</head>
+<body>
+    <form action="process.php">
+        <div>
+            <!-- Text Input -->
+            <label for="name">Name</label><br>
+            <input type="text" name="name" id="name" value="Sample Sampletary">
+            <!-- adding an id attri that is the same as the label's for attribute causes the label and input to interact -->
+            <!-- adding a name attri allows for the server to grab the corresponding value-->
+            <!-- value attribute places a default value into a field -- value acts as normal entry -->
+        </div>
+        <div>
+            <!-- Email Input -->
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" placeholder="sample@sample.com">
+            <!-- type of validation, only email addresses can be submitted here -->
+            <!-- placeholder attribute works like value above, but disappears when a user interacts with it -->
+        </div>
+        <div>
+            <!-- Textarea Input -->
+            <label for="message">Message</label><br>
+            <textarea name="message" id="message" cols="50" rows="5"></textarea>
+            <!-- cols and rows allow for customization outside of CSS -->
+        </div>
+        <div>
+            <!-- Select Input -->
+            <label for="sex">Sex</label>
+            <select name="sex" id="sex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+                <option value="preferNot" selected>Prefer Not to Say</option>
+            </select>
+        </div>
+        <div>
+            <!-- Number Input -->
+            <label for="age">Age</label><br>
+            <input type="number" name="age" id="age">
+        </div>
+        <div>
+            <!-- Date Input -->
+            <label for="birthdate">Birthdate</label>
+            <input type="date" name="birthdate" id="birthdate">
+            <!-- using this type of input really simplifies standardization of date entry from users -->
+        </div>
+        <div>
+            <!-- Radio Input -->
+            <label for="membership">Membership</label>
+            <input type="radio" name="membership" value= "simple" id="membership"> Simple
+            <input type="radio" name="membership" value= "standard" id="membership" checked> Standard
+            <input type="radio" name="membership" value= "super" id="membership"> Super
+            <!-- Labels don't even need their own tag here -->
+            <!-- adding checked to attribute list of a radio button makes that button the default selection -->
+
+        </div>
+        <div>
+            <!-- Checkbox Input -->
+            <label for="membership">I Like...</label>
+            <input type="checkbox" name="likes" value= "Icecream" id="likes"> Icecream
+            <input type="checkbox" name="likes" value= "Cake" id="likes"> Cake
+            <input type="checkbox" name="likes" value= "Cookies" id="likes"> Cookies
+        </div>
+        <div>
+            <!-- Buttons -->
+            <label for="buttons"></label>
+            <!-- Two different ways to make buttons -->
+            <input type="submit" name="" id="" value="Submit">
+            <br>
+            <button type="custom">Custom Button</button>
+            <br>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>

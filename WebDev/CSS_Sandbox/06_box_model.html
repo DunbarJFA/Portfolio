@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box Model / Margin and Padding</title>
+    <style>
+        /* CSS Reset */
+        *{
+            margin: 0;
+            padding: 0;
+            /* border-box makes it so that the padding is not added on to width, but treated as part of it */
+            box-sizing: border-box;
+        }
+
+        .box{
+            background: gray;
+            border: 2px solid #f0f;    
+            width: 500px;
+            
+            /* Padding on All sides */
+            padding: 20px;
+
+            /* Padding Per Side */
+            padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 10px;
+            /* Properties lower in the stylesheet overwrite the same properties higher up */
+            padding-left: 20px;
+
+            /* PAdding Shorthand = top, right, bottom, left */
+            padding: 10px 20px 10px 20px;
+
+            /* Padding Shorthand = top/bot left/right */
+            padding: 10px 20px;
+
+            /* MArgin on All Sides */
+            margin: 20px;
+
+            /* Margin Per Side */
+            margin-top: 10px;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            /* Properties lower in the stylesheet overwrite the same properties higher up */
+            margin-left: 20px;
+
+            /* Margin Shorthand = top, right, bottom, left */
+            margin: 10px 20px 10px 20px;
+
+            /* Margin Shorthand = top/bot left/right */
+            margin: 10px 20px;
+
+        }
+
+        .box h3{
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3>Box One</h3>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum odit, doloremque itaque magni error natus dolor aperiam a ad hic nulla labore autem aliquam optio quis assumenda aspernatur eligendi voluptate.
+        </p>
+    </div>
+    <div class="box">
+        <h3>Box Two</h3>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum odit, doloremque itaque magni error natus dolor aperiam a ad hic nulla labore autem aliquam optio quis assumenda aspernatur eligendi voluptate.
+        </p>
+    </div>
+    
+</body>
+</html>

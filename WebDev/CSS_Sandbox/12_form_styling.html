@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Styling Challenge</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* border-box makes it so that the padding is not added on to width, but treated as part of it */
+            box-sizing: border-box;
+        }
+        body {
+            background: #344a72;
+            font-family: raleway, sans-serif;
+        }
+
+        .form-wrap {
+            display: block;
+            background: #f4f4f4;
+            max-width: 300px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        
+        .form-wrap h1 {
+            text-align: center;
+            padding-bottom: 10px;
+        }
+        
+        .form-wrap p {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .form-wrap label {
+            display: block;
+            text-align: left;
+            padding: 3px;
+            font-family: raleway;
+            font-size: 12px;
+            color: #555;
+        }
+
+        .form-wrap input {
+            display: block;
+            text-align: justify;
+            min-width: 100%;
+            border: .5px solid #ddd;            
+            border-radius: 2px;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .form-wrap a {
+            text-decoration: none;
+        }
+
+        .btn {
+            display: block;
+            white-space: nowrap;
+            text-align: center;
+            background-color: #49c1a2;
+            color: #f4f4f4;
+            font-size: 10px;
+            padding: 8px 112px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .bottom-text {
+            font-size: x-small;
+            line-height: 20px;
+            margin-bottom: -30px;
+        }
+
+        footer {
+            display: block;
+            text-align: center;
+            color: #f4f4f4;
+            font-size: smaller;
+            margin: -15px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #49c1a2;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="form-wrap">
+            <h1>Sign Up</h1>
+            <p>It's free and only takes a minute</p>
+            <form>
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" name="firstName" id="first-name"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" name="lastName" id="last-name"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="password2">Confirm Password</label>
+                    <input type="password" name="password2" id="password2"
+                    />
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+                <p class="bottom-text">By clicking the Sign Up button, you agree to our
+                    <br> 
+                    <a href="#">Terms and Conditions</a>
+                    and
+                    <a href="#">Privacy Policy</a>
+                </p>
+            </form>
+        </div>
+        <footer>
+            <p>Already have an account? <a href="#">Login Here</a></p>
+        </footer>
+    </div>
+</body>
+</html>

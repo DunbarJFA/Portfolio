@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Visibility</title>
+    <style>
+        /* Targeting a specific class overrides all other styling in the stylesheet, regardless of what comes further down the sheet */
+        .hello {
+            color: red;
+            margin-top: -30px;
+            margin-left: -30px;
+        }
+        h1 {
+            /* Display: none completely removes the object from the browser display */
+               /* display: none; */
+            /* Visibility: hidden removes the item from the display, but maintains the space that the item would take up on the screen */
+               /* visibility: hidden; */
+
+
+            /* The !important keyword overrides any other rules, such as the precedence of class targeting mentioned above */
+               color: blue !important;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1 class="hello">Hello</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit neque nemo commodi, error sequi mollitia.</p>
+</body>
+</html>

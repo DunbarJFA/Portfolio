@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Div, Span, Id, and Class</title>
+    <style>
+        .card {
+            border: 1px solid #cccccc;
+            background: #f4f4f4;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+
+        .enhance {
+            color: yellow;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-header" class="card">
+        <h1>My Website</h1>
+        <p>A site about me...</p>
+    </div>
+    <ul id="main-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div id="about" class="card">
+        <!-- "#about" is an Emmet shortcut for making a div with id = about -->
+        <h3>About</h3>
+        <p>Lorem ipsum dolor <span class="enhance"> amet consectetur adipisicing elit.</span> Sit recusandae doloremque, pariatur rem vel quod velit natus illo harum corrupti?</p>
+    </div>
+
+    <div id="contact" class="card">
+        <h3>Contact</h3>
+        <ul>
+            <li>Address: 123 Main st</li>
+            <li>Phone: 123-123-1234</li>
+            <li>Email: me@email.com</li>
+        </ul>
+    </div>
+    <div id="footer">
+        <p>Copyright &copy; 2020</p>
+    </div>
+</body>
+<!-- IDs and Classes are functionally the same -->
+<!-- Difference is that IDs are unique and Classes are reusable-->
+</html>

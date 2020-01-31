@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Basics</title>
+    <style>
+
+        #container {
+            display: flex;
+            /* Direction sets the orientation of a line of flex items */
+            /* flex-direction: row; */
+            /* flex-direction: column; */
+
+            /* Wrap sets whether to scroll beyond 12 flex items or wrap */
+            /* flex-wrap: wrap; */
+            
+            /* Flow is essentially direction and wrap put together */
+            flex-flow: row wrap;
+        }
+        .item {
+            background: lightgray;
+            border: #333 solid 1px;
+            padding: 1rem;
+            text-align: center;
+            flex: 1;
+            margin: 0.75rem;
+        }
+
+        .item:first-child {
+            /* Sets the flex size of the first child to a size ratio determined by the value input. In this case, first child has a 2:1 size ratio compared to each of the other children. */
+            flex: 2;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- Twelve is the largest number of flex items you can have before either getting a scrollbar or setting up wrapping -->
+        <div class="item"><h3>Item 1</h3></div>
+        <div class="item"><h3>Item 2</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+    </div>
+</body>
+</html>
