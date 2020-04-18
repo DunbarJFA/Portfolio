@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+
+    margin: 140px auto;
+    padding: 45px;
+    width: fit-content;
+    background: #ffffff;
+    border-radius: 4px;
+}
+
+label {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+}
+
+#label_color_list {
+    text-decoration: underline;
+    margin-bottom: .5em;
+}
+
+#color_picker {
+    display: block;
+    margin: 1.5em auto;
+    width: 75px;
+    height: 25px;
+}
+
+ul li {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    height: 29px;
+    font-size: 20px;
+    margin-top: .5em;
+    border-radius: 4px;
+}
+
+.delete_button {
+    float: right;
+    background: beige;
+    border: 2px solid beige;
+    margin-top: .112em;
+    margin-right: .112em;
+    padding-bottom: .01em;
+    border-radius: 3px;
+}
