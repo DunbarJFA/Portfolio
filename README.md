@@ -1,6 +1,6 @@
 # Portfolio
 This is a collection of my work since starting my Computer Science Master's degree 
-program at the University of New Orleans in the Fall of 2017.
+program at the University of New Orleans.
 
 You'll find it subdivided firstly according to language or discipline, then according
 to a more specific breakdown of the tools or technologies used.
