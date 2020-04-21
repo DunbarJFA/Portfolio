@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 10px;
+    /*Allows for easy use of REM units*/
 }
 
 #container {
-
     margin: 140px auto;
     padding: 45px;
     width: fit-content;

@@ -1,8 +1,8 @@
-let picker = document.getElementById('color_picker');
-let list = document.getElementById('color_list');
-let body = document.getElementById('body');
+const picker = document.getElementById('color_picker');
+const list = document.getElementById('color_list');
+const body = document.getElementById('body');
 
-picker.oninput = function(){
+function colorPick(){
     let li = document.createElement("LI");
     let color = document.createTextNode(picker.value);
     li.appendChild(color);
@@ -20,3 +20,5 @@ picker.oninput = function(){
     };
     list.appendChild(li);
 }
+
+picker.addEventListener("input",colorPick);
